@@ -1,16 +1,12 @@
 def aws_region_var = ''
 def environment = ''
 
-if(BRANCH_NAME ==~ "dev") {
+if(BRANCH_NAME ==~ "dev.*") {
     println("Applying Dev")
     aws_region_var = "us-east-1"
     environment = "dev"
 }
-else if(BRANCH_NAME ==~ "dev1") {
-    println("Applying Dev")
-    aws_region_var = "us-east-1"
-    environment = "dev1"
-}
+
 else if(BRANCH_NAME ==~ "qa.*") {
     println("Applying QA")
     aws_region_var = "us-east-2"
