@@ -7,8 +7,8 @@ if(BRANCH_NAME ==~ "dev") {
     environment = "dev"
 }
 else if(BRANCH_NAME ==~ "dev1") {
-    println("Applying QA")
-    aws_region_var = "us-east-2"
+    println("Applying Dev")
+    aws_region_var = "us-east-1"
     environment = "dev1"
 }
 else if(BRANCH_NAME ==~ "qa.*") {
